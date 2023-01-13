@@ -14,11 +14,8 @@
 body {
     font-size: 1.6rem;
 }
-main {
-    
-    padding-inline: 2rem;
-}
 
+/* -------------------------------------------------------NAV-------------------------------------------------- */
 nav {
     display: flex;
     flex-direction: column;
@@ -45,6 +42,10 @@ nav .content {
     
 }
 
+nav .content h3 {
+    cursor: pointer;
+}
+
 nav .searchBar {
     width: 100%;
     margin-top: 4.3rem;
@@ -59,6 +60,8 @@ nav .searchBar svg {
     left: 1rem;
     top: 1rem;
 
+    cursor: pointer;
+
 }
 
 #search {
@@ -72,8 +75,101 @@ nav .searchBar svg {
 
     border: none;
 }
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
 
 input::placeholder {
     color: white;
     opacity: .5;
 }
+/* -------------------------------------------------------FIM NAV-------------------------------------------------- */
+
+/* -------------------------------------------------------MAIN-------------------------------------------------- */
+main {
+    background-color: rgba(233, 233, 233, 0.771);
+
+    padding-inline: 2rem;
+}
+
+.cards {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.5rem;
+
+    padding-block: 5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.6rem;
+
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.05);
+    border-radius: .5rem;
+    
+}
+
+
+
+.card .cardInformation {
+    display: flex;
+  
+    justify-content: space-between;
+}
+#icon {
+    /* fill: #574ae801; */
+    transition: fill 0.3s;
+    cursor: pointer;
+}
+#icon.filled,
+#icon:hover {
+  fill: #574ae8;
+  /* stroke-width: 7; */
+  stroke: #574ae8;
+  transition: fill 0.3s;
+
+}
+
+.card .cardContent h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+
+    margin-block: 2.7rem .9rem;
+
+    line-height: 2.6rem;
+
+}
+
+.card .cardContent p, 
+.cardInformation p {
+    font-size: 1.4rem;
+    color: #717171;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------FIM MAIN-------------------------------------------------- */
